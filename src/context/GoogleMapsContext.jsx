@@ -35,6 +35,9 @@ export function GoogleMapsContextProvider({ apiKey, libraries, children }) {
         } else if(!mapContainer) {
             throw new Error('mapContainer is required')
         }
+        if(map) {
+            return map
+        }
 
         setLoading(true)
 
